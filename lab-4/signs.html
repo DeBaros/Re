@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Дорожные знаки</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"> 
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> 
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script> 
+</head>
+<body>
+    <style> 
+        .tooltip {
+            position: relative; 
+        } 
+ 
+        .tooltip .ui-tooltip { 
+            position: absolute; 
+            background-color: #fff; 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            z-index: 1; 
+        } 
+    </style>
+    <script> 
+        $(function () { 
+            $(document).tooltip({ 
+                items: "img", 
+                content: function () { 
+                    var $element = $(this); 
+                    if ($element.is("img")) { 
+                        return $element.data('hint'); 
+                    } 
+                } 
+            }); 
+        }); 
+    </script>
+    <p>
+        <img class="tooltip" data-hint="Подсказка" src="img/1_1.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_2.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_3_1.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_3_2.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_4_1.svg">
+    </p>
+    <p>
+        <img class="tooltip" data-hint="Подсказка" src="img/1_5.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_6.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_7.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_8.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_9.svg">
+    </p>
+    <p>
+        <img class="tooltip" data-hint="Подсказка" src="img/1_10.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_11_1.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_11_2.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_12_1.svg">
+        <img class="tooltip" data-hint="Подсказка" src="img/1_12_2.svg">
+    </p>
+</body>
+</html>
